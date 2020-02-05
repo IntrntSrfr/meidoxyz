@@ -21,7 +21,7 @@ var (
 )
 
 func main() {
-	f, err := os.Open("./words.txt")
+	f, err := os.Open("./assets/words.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -37,11 +37,14 @@ func main() {
 	r.Get("/", mainHandler)
 	r.Get("/words", wordsHandler)
 
+	fileServer := http.StripPrefix("/static", http.FileServer(http.Dir("./static")))
+	r.Mount("/static", fileServer)
+
 	http.ListenAndServe(":7070", r)
 }
 
 func mainHandler(w http.ResponseWriter, r *http.Request) {
-	f, _ := os.Open("./index.html")
+	f, _ := os.Open("./static/index.html")
 	defer f.Close()
 
 	d, _ := ioutil.ReadAll(f)
@@ -70,7 +73,7 @@ func wordsHandler(w http.ResponseWriter, r *http.Request) {
 	t1 := time.Now()
 	respList := findMatches(inp, list)
 	total := time.Now().Sub(t1)
-	fmt.Println("time taken: ", total.String(), "\tresults found: ", len(respList))
+	fmt.Println("word: ", inp, "\ttime taken: ", total.String(), "\tresults found: ", len(respList))
 
 	sort.Sort(SortByCloseness(respList))
 

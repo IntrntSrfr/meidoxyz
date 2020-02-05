@@ -1,0 +1,68 @@
+body {
+    background-color: #482028;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e1e1e1;
+    margin: 0;
+}
+
+
+@keyframes fade_in {
+    from {
+        transform: translate(0, -100px);
+        opacity: 0;
+    }
+}
+
+.mainContainer {
+    animation: fade_in 2s cubic-bezier(.5, 0, 0, 1) 50ms backwards;
+    margin-top: 150px;
+}
+
+.main {
+    text-align: center;
+}
+
+.title{
+    font-size: 144px;
+}
+
+.description {
+    margin-top: 10px;
+    font-size: 30px;
+}
+
+.mainButtons {
+    margin-left: 25%;
+    max-width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.bot-invite{
+    background-color: #e1e1e1;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.bot-invite img{
+    margin-right: 30px;
+    height: 32px;
+    width: 32px;
+}
+
+.Section{
+    width: 100%;
+    padding: 0 80px;
+    display: flex;
+}
+
+.SectionTitle{
+
+    display: inline-block;
+}
+.SectionText{
+    display: inline-block;
+}
