@@ -21,7 +21,7 @@ var (
 )
 
 func main() {
-	f, err := os.Open("./assets/words.txt")
+	f, err := os.Open("./static/assets/words.txt")
 	if err != nil {
 		fmt.Println(err)
 		return
