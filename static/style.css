@@ -71,11 +71,11 @@ body {
     height: 150px;
 }
 
-.contentTitle img{
+.contentTitle img {
     width: 100px;
 }
 
-.contentDescription{
+.contentDescription {
     margin-top: 10px;
     font-size: 24px;
 }
@@ -101,11 +101,11 @@ body {
 }
 
 .contentLeft a:hover,
-.contentRight a:hover{
+.contentRight a:hover {
     color: #ffffff;
 }
 
-.discordLink{
+.discordLink {
     transition: 0.2s;
     margin: 5px;
     line-height: 60px;
@@ -116,12 +116,13 @@ body {
     padding: 10px 20px;
     border-radius: 3px;
 }
-.discordLink:hover{
+
+.discordLink:hover {
     transition: 0.2s;
     background-color: rgba(54, 24, 30, 0.5);
 }
 
-.githubLink{
+.githubLink {
     transition: 0.2s;
     margin: 5px;
     background-color: #222222;
@@ -133,7 +134,8 @@ body {
     line-height: 48px;
     font-size: 24px;
 }
-.githubLink:hover{
+
+.githubLink:hover {
     transition: 0.2s;
     background-color: #2a2a2a
 }
